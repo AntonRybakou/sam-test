@@ -1,12 +1,44 @@
 import React, { ReactElement } from 'react';
 
-import { Header } from 'components';
+import styled from 'styled-components';
+
+import { Header, Products, Cart } from 'components';
+
+const AppWrapper = styled.div`
+  border: 1px dotted red;
+  width: 1280px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-areas:
+    'h h h h'
+    'p p p c';
+`;
+
+const HeaderWrapper = styled.div`
+  grid-area: h;
+`;
+
+const ProductsWrapper = styled.div`
+  grid-area: p;
+`;
+
+const CartWrapper = styled.div`
+  grid-area: c;
+`;
 
 const App = (): ReactElement => {
   return (
-    <>
-      <Header />
-    </>
+    <AppWrapper>
+      <HeaderWrapper>
+        <Header />
+      </HeaderWrapper>
+      <ProductsWrapper>
+        <Products />
+      </ProductsWrapper>
+      <CartWrapper>
+        <Cart />
+      </CartWrapper>
+    </AppWrapper>
   );
 };
 

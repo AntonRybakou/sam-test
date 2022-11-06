@@ -7,10 +7,10 @@ const Wrapper = styled.div`
   padding: 10px;
 `;
 
-export const Header = (): ReactElement => {
+export const Cart = (): ReactElement => {
   return (
     <Wrapper>
-      <div>Header</div>
+      <div>Cart</div>
     </Wrapper>
   );
 };
