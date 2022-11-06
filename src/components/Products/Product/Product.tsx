@@ -1,4 +1,6 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+
+import styled from 'styled-components';
 
 export type ProductPropsType = {
   title: string;
@@ -7,19 +9,31 @@ export type ProductPropsType = {
   image: string;
 };
 
+const ProductWrapper = styled.div`
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Image = styled.img`
+  max-width: fit-content;
+  height: 150px;
+`;
+
 export const Product: React.FC<ProductPropsType> = ({
   title,
   description,
   price,
   image,
-}): ReactElement => {
+}) => {
   return (
-    <div>
-      <img src={image} alt={'product image'} />
-      <h2>{title}</h2>
+    <ProductWrapper>
+      <Image src={image} alt={'product image'} />
+      <h3>{title}</h3>
       <p>{description}</p>
-      <p>{price}</p>
-      <button></button>
-    </div>
+      <p>$ {price}</p>
+      <button>Buy</button>
+    </ProductWrapper>
   );
 };

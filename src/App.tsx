@@ -12,6 +12,7 @@ const AppWrapper = styled.div`
   grid-template-areas:
     'h h h h'
     'p p p c';
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 `;
 
 const HeaderWrapper = styled.div`

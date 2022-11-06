@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 export const Cart = (): ReactElement => {
   return (
     <Wrapper>
-      <div>Cart</div>
+      <h2>Cart</h2>
     </Wrapper>
   );
 };
