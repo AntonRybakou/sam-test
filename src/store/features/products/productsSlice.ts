@@ -41,16 +41,10 @@ const initialState: ProductsType = [
   },
 ];
 
-export const cartSlice = createSlice({
-  name: 'app',
+export const productsSlice = createSlice({
+  name: 'products',
   initialState,
-  reducers: {
-    addProduct() {},
-    removeProduct() {},
-    cartCheckout() {},
-  },
+  reducers: {},
 });
 
-export const { addProduct, removeProduct, cartCheckout } = cartSlice.actions;
-
-export default cartSlice.reducer;
+export default productsSlice.reducer;

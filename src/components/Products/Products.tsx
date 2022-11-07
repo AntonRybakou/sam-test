@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 `;
 
 export const Products = (): ReactElement => {
-  const ProductsList = useAppSelector(state => state.cart);
+  const ProductsList = useAppSelector(state => state.products);
 
   return (
     <Wrapper>
