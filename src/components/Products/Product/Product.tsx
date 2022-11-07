@@ -1,9 +1,14 @@
 import React from 'react';
 
-import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
-import { ProductType } from 'components';
+export type ProductType = {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  image: string;
+};
 
 const ProductWrapper = styled.div`
   border: 1px solid black;
@@ -17,20 +22,14 @@ const Image = styled.img`
   height: 150px;
 `;
 
-export const Product: React.FC<ProductType> = ({
-  title,
-  description,
-  price,
-  image,
-  addItem,
-}) => {
+export const Product: React.FC<ProductType> = ({ title, description, price, image }) => {
   return (
     <ProductWrapper>
       <Image src={image} alt={'product image'} />
       <h3>{title}</h3>
       <p>{description}</p>
       <p>$ {price}</p>
-      <button onClick={addItem}>Buy</button>
+      <button>Buy</button>
     </ProductWrapper>
   );
 };
