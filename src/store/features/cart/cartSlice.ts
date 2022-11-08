@@ -1,15 +1,25 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
+import { ProductType } from 'components/Products/ProductItem/ProductItem';
+// import { CartItemPropsType } from 'components/Cart/CartItem/CartItem';
 
 const initialState = {
-  products: {},
-  totalPrice: 0,
+  cart: [],
 };
 
 export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    addProduct() {},
+    addProduct: (state, action: PayloadAction<ProductType>) => {
+      const itemInCart = state.cart.find(item => item.id === action.payload.id);
+
+      if (itemInCart) {
+        itemInCart.quantity++;
+      } else {
+        state.cart.push({ ...action.payload, quantity: 1 });
+      }
+    },
     removeProduct() {},
     cartCheckout() {},
   },

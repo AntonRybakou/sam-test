@@ -2,6 +2,9 @@ import React from 'react';
 
 import styled from 'styled-components';
 
+import { addProduct } from 'store/features/cart/cartSlice';
+import { useAppDispatch } from 'store/hooks';
+
 export type ProductType = {
   id: number;
   title: string;
@@ -22,14 +25,36 @@ const Image = styled.img`
   height: 150px;
 `;
 
-export const Product: React.FC<ProductType> = ({ title, description, price, image }) => {
+export const ProductItem: React.FC<ProductType> = ({
+  id,
+  title,
+  description,
+  price,
+  image,
+}) => {
+  const dispatch = useAppDispatch();
+
   return (
     <ProductWrapper>
       <Image src={image} alt={'product image'} />
       <h3>{title}</h3>
       <p>{description}</p>
       <p>$ {price}</p>
-      <button>Buy</button>
+      <button
+        onClick={() => {
+          dispatch(
+            addProduct({
+              id,
+              title,
+              image,
+              price,
+              description,
+            }),
+          );
+        }}
+      >
+        Buy
+      </button>
     </ProductWrapper>
   );
 };

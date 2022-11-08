@@ -2,8 +2,7 @@ import React, { ReactElement } from 'react';
 
 import styled from 'styled-components';
 
-import { Product, ProductType } from './Product/Product';
-
+import { ProductItem, ProductType } from 'components/Products/ProductItem/ProductItem';
 import { useAppSelector } from 'store/hooks';
 
 export type ProductsType = {
@@ -30,7 +29,7 @@ export const Products = (): ReactElement => {
     <Wrapper>
       {ProductsList.map((el: ProductType) => {
         return (
-          <Product
+          <ProductItem
             key={el.id}
             id={el.id}
             title={el.title}
