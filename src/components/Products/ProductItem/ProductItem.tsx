@@ -11,6 +11,7 @@ export type ProductType = {
   description: string;
   price: number;
   image: string;
+  quantity?: number;
 };
 
 const ProductWrapper = styled.div`

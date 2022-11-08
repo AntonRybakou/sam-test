@@ -1,5 +1,7 @@
 import React, { ReactElement } from 'react';
 
+import styled from 'styled-components';
+
 export type CartItemPropsType = {
   id: number;
   title: string;
@@ -9,6 +11,10 @@ export type CartItemPropsType = {
   quantity: number;
 };
 
+const Wrapper = styled.div`
+  border: 1px dotted black;
+`;
+
 export const CartItem: React.FC<CartItemPropsType> = ({
   // id,
   title,
@@ -16,13 +22,13 @@ export const CartItem: React.FC<CartItemPropsType> = ({
   quantity = 0,
 }): ReactElement => {
   return (
-    <div>
+    <Wrapper>
       <p>{title}</p>
       <p>
         $ {price} x {quantity}
       </p>
       <button>+</button>
       <button>-</button>
-    </div>
+    </Wrapper>
   );
 };
