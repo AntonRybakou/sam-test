@@ -5,14 +5,13 @@ import styled from 'styled-components';
 import { addProduct } from 'store/features/cart/cartSlice';
 import { useAppDispatch } from 'store/hooks';
 
-export type ProductType = {
+export interface ProductType {
   id: number;
   title: string;
   description: string;
   price: number;
   image: string;
-  quantity?: number;
-};
+}
 
 const ProductWrapper = styled.div`
   border: 1px solid black;

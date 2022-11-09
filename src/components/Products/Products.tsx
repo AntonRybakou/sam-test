@@ -5,13 +5,7 @@ import styled from 'styled-components';
 import { ProductItem, ProductType } from 'components/Products/ProductItem/ProductItem';
 import { useAppSelector } from 'store/hooks';
 
-export type ProductsType = {
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-  image: string;
-}[];
+export interface ProductsListType extends Array<ProductType> {}
 
 const Wrapper = styled.div`
   border: 1px solid black;

@@ -1,12 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 import { CartItemPropsType } from 'components/Cart/CartItem/CartItem';
 import { ProductType } from 'components/Products/ProductItem/ProductItem';
 
-type initialStateType = {
+interface initialStateType {
   cart: Array<CartItemPropsType>;
-};
+}
 
 const initialState: initialStateType = {
   cart: [],
@@ -25,7 +25,9 @@ export const cartSlice = createSlice({
         state.cart.push({ ...action.payload, quantity: 1 });
       }
     },
-    removeProduct() {},
+    removeProduct: (state, action) => {
+      state.cart = state.cart.filter(item => item.id !== action.payload);
+    },
     cartCheckout() {},
   },
 });
