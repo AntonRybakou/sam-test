@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 
+import Modal from 'react-modal';
 import styled from 'styled-components';
 
 import { CartItem, CartItemPropsType } from 'components/Cart/CartItem/CartItem';
@@ -11,13 +12,24 @@ const Wrapper = styled.div`
   padding: 10px;
 `;
 
+const modalStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+
 export const Cart = (): ReactElement => {
   const CartList = useAppSelector(state => state.cart.cart);
   const dispatch = useAppDispatch();
-  /* const [isModal, setIsModal] = React.useState<boolean>(false);
+  const [isModal, setIsModal] = React.useState<boolean>(false);
   const showModal = (): void => {
     setIsModal(!isModal);
-  }; */
+  };
 
   const getTotalPrice = (): number => {
     let total = 0;
@@ -48,9 +60,25 @@ export const Cart = (): ReactElement => {
       {CartList.length > 0 && (
         <div>
           <p>Total {getTotalPrice()}</p>
-          <button onClick={() => dispatch(cartCheckout())}>Checkout</button>
+          <button
+            onClick={() => {
+              showModal();
+            }}
+          >
+            Checkout
+          </button>
         </div>
       )}
+      <Modal
+        isOpen={isModal}
+        onRequestClose={() => {
+          showModal();
+          dispatch(cartCheckout());
+        }}
+        style={modalStyles}
+      >
+        <div>Thank you for your purchase</div>
+      </Modal>
     </Wrapper>
   );
 };
