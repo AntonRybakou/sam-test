@@ -2,10 +2,10 @@ import React, { ReactElement } from 'react';
 
 import styled from 'styled-components';
 
-import { ProductItem, ProductType } from 'components/Products/ProductItem/ProductItem';
+import { ProductItem, ProductType } from 'components';
 import { useAppSelector } from 'store/hooks';
 
-export interface ProductsListType extends Array<ProductType> {}
+export interface ProductsType extends Array<ProductType> {}
 
 const Wrapper = styled.div`
   border: 1px solid black;
