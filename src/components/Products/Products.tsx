@@ -8,6 +8,7 @@ import { useAppSelector } from 'store/hooks';
 export interface ProductsType extends Array<ProductType> {}
 
 const Wrapper = styled.div`
+  grid-area: products;
   border: 1px solid black;
   padding: 10px;
   display: grid;

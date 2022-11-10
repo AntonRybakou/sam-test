@@ -10,35 +10,17 @@ const AppWrapper = styled.div`
   margin: 20px auto;
   display: grid;
   grid-template-areas:
-    'h h h h'
-    'p p p c';
+    'header header header header'
+    'products products products cart';
   grid-template-columns: 1fr 1fr 1fr 1fr;
-`;
-
-const HeaderWrapper = styled.div`
-  grid-area: h;
-`;
-
-const ProductsWrapper = styled.div`
-  grid-area: p;
-`;
-
-const CartWrapper = styled.div`
-  grid-area: c;
 `;
 
 const App = (): ReactElement => {
   return (
     <AppWrapper>
-      <HeaderWrapper>
-        <Header />
-      </HeaderWrapper>
-      <ProductsWrapper>
-        <Products />
-      </ProductsWrapper>
-      <CartWrapper>
-        <Cart />
-      </CartWrapper>
+      <Header />
+      <Products />
+      <Cart />
     </AppWrapper>
   );
 };

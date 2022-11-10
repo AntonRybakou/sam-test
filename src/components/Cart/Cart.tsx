@@ -9,6 +9,7 @@ import { useAppDispatch, useAppSelector } from 'store/hooks';
 
 const Wrapper = styled.div`
   border: 1px solid black;
+  grid-area: cart;
   padding: 10px;
 `;
 
