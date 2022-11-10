@@ -3,21 +3,21 @@ import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  border: 1px solid black;
   grid-area: header;
   padding: 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 `;
 
 const Logo = styled.img`
-  width: 75px;
+  width: 100px;
 `;
 
 const Title = styled.h1`
   margin: 0;
   font-size: 32px;
+  font-weight: 900;
 `;
 
 export const Header = (): ReactElement => {
@@ -25,11 +25,11 @@ export const Header = (): ReactElement => {
     <Wrapper>
       <Logo
         src={
-          'https://png.pngtree.com/element_our/png/20180917/shopping-logo-design.-shop-template-vector.-png_98547.jpg'
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png'
         }
         alt={'logo'}
       />
-      <Title>Sam test shop</Title>
+      <Title>Sam-test shop</Title>
     </Wrapper>
   );
 };

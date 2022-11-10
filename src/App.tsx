@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { Header, Products, Cart } from 'components';
 
 const AppWrapper = styled.div`
-  border: 1px dotted red;
   width: 1280px;
   margin: 20px auto;
   display: grid;

@@ -5,12 +5,12 @@ import { ProductsType } from 'components';
 const initialState: ProductsType = [
   {
     id: 1,
-    title: 'Title 1',
+    title: 'Space Helmet',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, veritatis!',
     price: 50,
     image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7coDbRWUTzE9_XdGdXYcyN27nwoGtwUK4gQ&usqp=CAU',
+      'https://www.pngall.com/wp-content/uploads/5/Vector-Astronaut-Helmet-PNG-Download-Image.png',
   },
   {
     id: 2,
@@ -32,6 +32,33 @@ const initialState: ProductsType = [
   },
   {
     id: 4,
+    title: 'Title 4',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, veritatis!',
+    price: 1000,
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDhRPAraH9HVa-J4KmEkiZlpJgjfpdv8NbBw&usqp=CAU',
+  },
+  {
+    id: 5,
+    title: 'Title 4',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, veritatis!',
+    price: 1000,
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDhRPAraH9HVa-J4KmEkiZlpJgjfpdv8NbBw&usqp=CAU',
+  },
+  {
+    id: 6,
+    title: 'Title 4',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, veritatis!',
+    price: 1000,
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDhRPAraH9HVa-J4KmEkiZlpJgjfpdv8NbBw&usqp=CAU',
+  },
+  {
+    id: 7,
     title: 'Title 4',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, veritatis!',
