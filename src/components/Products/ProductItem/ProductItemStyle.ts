@@ -5,13 +5,14 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 15px;
-  transition: all 0.6s ease;
-  background-color: #e8e8e8;
+  border: 1px solid #5d5d5d;
+  //border-radius: 15px;
+  transition: all 0.7s ease;
+  //background-color: #e8e8e8;
 
   :hover {
-    box-shadow: -7px -7px 15px 0 rgba(255, 255, 255, 0.7),
-      7px 7px 15px 0 rgba(0, 0, 0, 0.2);
+    transform: translateX(-5px) translateY(-5px);
+    box-shadow: 5px 5px 0 #d2d2f9;
   }
 `;
 
