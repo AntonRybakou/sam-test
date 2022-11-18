@@ -6,9 +6,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   border: 1px solid #5d5d5d;
-  //border-radius: 15px;
   transition: all 0.7s ease;
-  //background-color: #e8e8e8;
 
   :hover {
     transform: translateX(-5px) translateY(-5px);
