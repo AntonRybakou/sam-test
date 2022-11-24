@@ -51,6 +51,7 @@ export const BuyButton = styled.button`
   border-radius: 50%;
   background-color: #0b3d91;
   color: white;
+  cursor: pointer;
 
   :hover {
     color: #f4412d;

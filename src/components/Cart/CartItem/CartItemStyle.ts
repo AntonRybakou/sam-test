@@ -45,6 +45,7 @@ export const QuantityButtons = styled.button`
   border-radius: 50%;
   background-color: #14B82E;
   color: white;
+  cursor: pointer;
 
   :hover {
     color: yellow;
@@ -68,6 +69,7 @@ export const RemoveButton = styled.button`
   border-radius: 30px;
   background-color: rgba(229, 55, 37, 0.5);
   color: white;
+  cursor: pointer;
 
   :hover {
     background-color: rgba(229, 55, 37, 255);

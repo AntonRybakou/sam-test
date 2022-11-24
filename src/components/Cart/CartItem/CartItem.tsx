@@ -35,12 +35,12 @@ export const CartItem: React.FC<CartItemPropsType> = ({
       <Price>
         ${price}
         <Quantity>
-          <QuantityButtons onClick={() => dispatch(incrementQuantity(id))}>
-            +
-          </QuantityButtons>
-          {quantity}
           <QuantityButtons onClick={() => dispatch(decrementQuantity(id))}>
             -
+          </QuantityButtons>
+          {quantity}
+          <QuantityButtons onClick={() => dispatch(incrementQuantity(id))}>
+            +
           </QuantityButtons>
         </Quantity>
       </Price>

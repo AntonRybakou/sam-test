@@ -37,6 +37,7 @@ export const CheckoutButton = styled.button`
   border: none;
   background-color: #0b3d91;
   color: white;
+  cursor: pointer;
 
   :hover {
     color: #51f85a;

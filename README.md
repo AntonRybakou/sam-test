@@ -1,6 +1,6 @@
 ### Template
 - yarn create react-app my-app --template redux-typescript
-### Tools:
+### Tools
 1. [TypeScript](https://www.typescriptlang.org/)
 2. [React](https://reactjs.org/)
 3. [Redux](https://redux.js.org/)
