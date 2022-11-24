@@ -8,3 +8,6 @@
 5. [styled components](https://styled-components.com/)
 6. [eslint / prettier](https://github.com/GlebPilipenko/eslint-prettier)
 7. [React modal](https://github.com/reactjs/react-modal)
+
+### Screenshot
+![img.png](src/accets/images/screenshot.png)

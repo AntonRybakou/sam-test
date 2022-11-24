@@ -1,80 +1,21 @@
 import React, { ReactElement } from 'react';
 
 import Modal from 'react-modal';
-import styled from 'styled-components';
+
+import {
+  Wrapper,
+  Title,
+  CartImage,
+  TotalPrice,
+  CheckoutButton,
+  ModalButton,
+  modalStyles,
+} from './CartStyle';
 
 import CartIcon from 'accets/icons/cart.png';
 import { CartItem, CartItemPropsType } from 'components/Cart/CartItem/CartItem';
 import { cartCheckout } from 'store/features/cart/cartSlice';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
-
-const Wrapper = styled.div`
-  grid-area: cart;
-  padding: 10px;
-`;
-
-const Title = styled.h2`
-  margin: 0;
-  padding: 10px;
-  font-size: 24px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-`;
-
-const CartImage = styled.img`
-  width: 60px;
-`;
-
-const TotalPrice = styled.div`
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 24px;
-  font-weight: 900;
-`;
-
-const CheckoutButton = styled.button`
-  padding: 10px;
-  border-radius: 30px;
-  font-size: 20px;
-  font-weight: 700;
-  border: none;
-  background-color: #0b3d91;
-  color: white;
-
-  :hover {
-    color: #51f85a;
-  }
-
-  :active {
-    transform: scale(0.98);
-    background: #0b3d91;
-    box-shadow: inset 10px 10px 25px #061f49,
-      inset -10px -10px 25px #115cda;
-`;
-
-const modalStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    fontSize: '32px',
-  },
-};
-
-const ModalButton = styled.button`
-  display: block;
-  margin: 10px auto;
-  background: none;
-  border: 1px solid black;
-`;
 
 export const Cart = (): ReactElement => {
   const CartList = useAppSelector(state => state.cart.cart);
@@ -137,7 +78,6 @@ export const Cart = (): ReactElement => {
         style={modalStyles}
       >
         <div>Thank you for your purchase</div>
-        {/* <div>Total: {getTotalPrice()}</div> */}
         <ModalButton
           onClick={() => {
             dispatch(cartCheckout());
