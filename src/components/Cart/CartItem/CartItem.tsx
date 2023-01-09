@@ -7,8 +7,7 @@ import {
   Quantity,
   QuantityButtons,
   RemoveButton,
-} from './CartItemStyle';
-
+} from 'components/Cart/CartItem/CartItem.styled';
 import { ProductType } from 'components/Products/ProductItem/ProductItem';
 import {
   decrementQuantity,

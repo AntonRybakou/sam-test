@@ -6,11 +6,12 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   border: 1px solid #5d5d5d;
-  transition: all 0.7s ease;
+  transition: all 250ms ease;
+  background-color: white;
 
   :hover {
-    transform: translateX(-5px) translateY(-5px);
-    box-shadow: 5px 5px 0 #d2d2f9;
+    transform: translateX(5px) translateY(-5px);
+    box-shadow: -10px 10px 0 black;
   }
 `;
 
@@ -54,7 +55,7 @@ export const BuyButton = styled.button`
   cursor: pointer;
 
   :hover {
-    color: #f4412d;
+    color: #11f123;
   }
 
   :active {

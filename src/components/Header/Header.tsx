@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import { Wrapper, Logo, Title } from './HeaderStyle';
+import { Wrapper, Logo, Title } from 'components/Header/Header.styled';
 
 export const Header = (): ReactElement => {
   return (
@@ -11,7 +11,7 @@ export const Header = (): ReactElement => {
         }
         alt={'logo'}
       />
-      <Title>Sam-test shop</Title>
+      <Title>Your shop name</Title>
     </Wrapper>
   );
 };

@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react';
 
 import Modal from 'react-modal';
 
+import CartIcon from 'accets/icons/cart.png';
 import {
   Wrapper,
   Title,
@@ -10,9 +11,7 @@ import {
   CheckoutButton,
   ModalButton,
   modalStyles,
-} from './CartStyle';
-
-import CartIcon from 'accets/icons/cart.png';
+} from 'components/Cart/Cart.styled';
 import { CartItem, CartItemPropsType } from 'components/Cart/CartItem/CartItem';
 import { cartCheckout } from 'store/features/cart/cartSlice';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
@@ -71,6 +70,7 @@ export const Cart = (): ReactElement => {
       )}
       <Modal
         isOpen={isModal}
+        ariaHideApp={false}
         onRequestClose={() => {
           toggleModal();
           dispatch(cartCheckout());

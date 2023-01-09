@@ -1,7 +1,13 @@
 import React from 'react';
 
-import { Wrapper, Image, Title, Description, Price, BuyButton } from './ProductItemStyle';
-
+import {
+  Wrapper,
+  Image,
+  Title,
+  Description,
+  Price,
+  BuyButton,
+} from 'components/Products/ProductItem/ProductItem.styled';
 import { addProduct } from 'store/features/cart/cartSlice';
 import { useAppDispatch } from 'store/hooks';
 
@@ -43,7 +49,7 @@ export const ProductItem: React.FC<ProductType> = ({
             );
           }}
         >
-          Buy
+          Add
         </BuyButton>
       </Price>
     </Wrapper>

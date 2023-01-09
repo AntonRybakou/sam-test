@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Header, Products, Cart } from 'components';
 
 const AppWrapper = styled.div`
-  width: 1280px;
+  max-width: 1280px;
   margin: 20px auto;
   display: grid;
   grid-template-areas:

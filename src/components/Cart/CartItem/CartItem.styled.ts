@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   border-radius: 15px;
   transition: all 0.6s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   :hover {
     box-shadow: -7px -7px 15px 0 rgba(255, 255, 255, 0.7),

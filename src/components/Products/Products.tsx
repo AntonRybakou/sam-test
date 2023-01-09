@@ -11,9 +11,10 @@ const Wrapper = styled.div`
   grid-area: products;
   padding: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   column-gap: 10px;
   row-gap: 15px;
+  border: 1px solid black;
 `;
 
 export const Products = (): ReactElement => {
